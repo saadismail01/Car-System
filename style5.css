@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(to left, #030925, #020636, #19014a);
+}
+nav {
+  width: 100%;
+  background-color: #030925;
+  overflow: auto;
+  padding-bottom: 5px;
+}
+.form-control {
+  padding: 7px;
+  border: #19014a solid 3px;
+  border-radius: 3px;
+}
+.btn-outline-success {
+  padding: 10px;
+  background-color: aqua;
+  border-radius: 10px;
+  border: #19014a solid 4px;
+}
+.container-fluid ul li {
+  float: left;
+  list-style: none;
+  font-size: 20px;
+  width: 10%;
+  text-align: center;
+}
+.container-fluid ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.container-fluid form {
+  float: right;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table {
+  color: aliceblue;
+}
+.table thead tr th {
+  padding: 50px;
+}
+.table tbody tr td {
+  padding: 10px;
+  padding-left: 50px;
+}
+.table tbody tr td a button {
+  padding: 10px;
+  background-color: aqua;
+  border-radius: 10px;
+  border: #19014a solid 4px;
+}
+.container-c {
+  margin-top: 50px;
+}
+.container-c label {
+  color: aliceblue;
+  margin-left: 40px;
+}
+.container-c button {
+  padding: 10px;
+  background-color: aqua;
+  border-radius: 10px;
+  border: #19014a solid 4px;
+}

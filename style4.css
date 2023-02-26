@@ -1,0 +1,232 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #030925, #020636, rgb(25, 1, 74));
+}
+
+form {
+  padding: 25px 70px;
+  background: linear-gradient(to left, #030925, #020636, rgb(25, 1, 74));
+  border-radius: 10px;
+  position: relative;
+  height: 85%;
+}
+
+h2.log {
+  color: #e8fcfc;
+  margin-bottom: 10px;
+  margin-left: -40px;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+.error {
+  color: #21ebff;
+  font-size: 16px;
+  padding: 4px;
+  margin: 4px;
+}
+label {
+  color: #e8fcfc;
+  margin-left: -20px;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+input {
+  margin: 5px 0;
+  margin-left: -20px;
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+/* 
+a {
+  display: inline-block;
+  letter-spacing: 2px;
+  text-decoration: none;
+  position: relative;
+  padding: 7px 5px;
+  margin: 10px;
+  margin-left: 70px;
+  color: #03e9f4;
+  overflow: hidden;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+a:hover {
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 5px 5px 100px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, #0005);
+}
+a:first-child {
+  filter: hue-rotate(270deg);
+}
+a:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+a span {
+  position: absolute;
+  display: block;
+}
+a span:first-child {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: turn 1s linear infinite;
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: turn2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: turn3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: turn4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes turn {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+@keyframes turn2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes turn3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes turn4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+} */
+button {
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 180px;
+  background-color: aqua;
+  border-radius: 10px;
+  border: #19014a solid 4px;
+}
+/* 1 */
+
+:root {
+  --card-height: 70vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 100deg;
+  inherits: false;
+}
+.card {
+  width: var(--card-height);
+  height: 333px;
+  padding: 40px;
+  position: relative;
+  border-radius: 6px;
+  margin-left: 10px;
+  margin-top: 100px;
+  font-size: 1.5em;
+  color: rgb(88, 199, 250);
+  cursor: pointer;
+}
+
+.card:hover {
+  color: rgb(#21ebff / 50%);
+  transition: #21ebff 1s;
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  transform: scale(0.9);
+  background-image: linear-gradient(
+    var(--rotate),
+    #21ebff 50%,
+    #3c67e3 90%,
+    #21ebff
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: -100px;
+  left: -100px;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #21ebff 50%,
+    #3c67e3 90%,
+    #21ebff
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
